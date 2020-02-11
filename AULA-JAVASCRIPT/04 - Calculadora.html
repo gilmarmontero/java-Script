@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula javaScript</title>
+</head>
+<body>
+
+    <h1>Taboada</h1>
+
+
+    <input type="text">
+    <button onclick="calcular()">Calcular</button>
+
+    
+
+
+    <script>
+        var valor = document.querySelector('input');
+          
+        var list_valor = [0,1,2,3,4,5,6,7,8,9,10];
+
+
+        function calcular(){
+            for(item of list_valor){                
+                var texto = document.createTextNode( valor.value+" x "+item+" = "+item*valor.value);
+                var res = document.createElement('li');
+                console.log(texto);
+                res.appendChild(texto);
+                var lista = document.querySelector('ul');
+                lista.appendChild(res);
+            }
+        }
+        
+    </script>
+
+
+
+ 
+
+    <br>
+    <br>
+    <div>
+        <ul>
+
+        </ul>
+    </div>
+</body>
+</html>

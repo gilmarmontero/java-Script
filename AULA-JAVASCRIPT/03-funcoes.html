@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>javaScript</title>
+    <h1>Funções</h1>
+</head>
+<body>
+
+    <h1>Eventos</h1>
+    <div>
+        <p>Eventos in line</p>
+        <button onclick="mostrarAlerta()"> Me pressione</button>
+        <input onkeyup="mostrarAlerta()">
+    </div>
+
+    <script>
+    
+        function mostrarAlerta(){
+            alert("O botão foi clicado")
+        }
+    
+    </script>
+
+    <script>
+
+        console.log(soma("p"))
+
+        function soma(sexo) {
+            if(sexo == 'm'){
+                return("masculino")
+            }else if(sexo == 'f'){
+                return("feminino")
+
+            }else{
+                return("indefinido")
+            }
+
+        }
+
+        console.log(retornaSexo("f"))
+
+        function retornaSexo(sexo){
+            switch(sexo){
+                case 'm':
+                    return "masculino"
+                case 'f':
+                    return "feminino"
+                default:
+                    return  "indefinido"
+            }
+        }
+
+        console.log(aprovacao1(6, 0.6))
+
+        function aprovacao1(nota, presenca) {
+            if(nota >= 7 || presenca >= 0.75){
+                return "aprovado"
+            }else{
+                return "reprovado"
+            }
+        }
+
+    
+    </script>
+</body>
+</html>
